@@ -49,10 +49,10 @@ int main()
 		switch (opcoes)
 		{
 		case 0:
-			printf("Saindo...\n");
+			printf("::::::::: Saindo :::::::::\n");
 			break;
 		case 1:
-			printf(":::::Empilhar::::: \n");
+			printf("::::: Empilhar ::::: \n");
 			printf("ID do cliente \n");
 			scanf("%d", &idCliente);
 			printf("Nome do produto \n");
@@ -78,25 +78,25 @@ int main()
 
 			break;
 		case 2:
-			printf("Desempilhar \n");
+			printf("::::::::: Desempilhar ::::::::: \n");
 			int t = desempilhar(&ponteiroLista);
 
 			t == 1 ? printf("A lista nao possui nenhum elemento para ser removido \n\n") : printf("Desempilhado com sucesso \n\n");
 
 			break;
 		case 3:
-			printf("Quantidade de elementos \n");
+			printf("::::::::: Quantidade de elementos ::::::::: \n");
 			int q = quantidadeElementos(ponteiroLista);
 
 			printf("Possui %d de elementos na lista \n", q);
 			break;
 		case 4:
-			printf("Mostrar quem e o topo \n");
+			printf("::::::::: Mostrar quem e o topo ::::::::: \n");
 	 topo(ponteiroLista);
 
 			break;
 		case 5:
-			printf("Mostrar pilha\n");
+			printf("::::::::: Mostrar pilha :::::::::\n");
 			pilha(ponteiroLista);
 			break;
 		}
@@ -179,7 +179,7 @@ int topo(produtos *ponteiroLista)
 		printf("Nome Produto %s\t", ponteiroLista->nomeProduto);
 		printf("Valor unitario %g\t", ponteiroLista->valorunitarioProduto);
 		printf("Quantidade %d\t", ponteiroLista->quantProduto);
-		printf("Valor total %.2f\n", ponteiroLista->valortotalProduto);
+		printf("Valor total %.2f\n\n", ponteiroLista->valortotalProduto);
 		return 0;
 	}
 	else{
@@ -199,6 +199,6 @@ void pilha(produtos *ponteiroLista)
 		printf("Nome Produto %s\t", i->nomeProduto);
 		printf("Valor unitario %g\t", i->valorunitarioProduto);
 		printf("Quantidade %d\t", i->quantProduto);
-		printf("Valor total %.2f\n", i->valortotalProduto);
+		printf("Valor total %.2f\n\n", i->valortotalProduto);
 	}
 }
